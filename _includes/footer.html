@@ -1,0 +1,22 @@
+<div id="footer" class="middleOuter">
+    <div id="copyright" class="middle">Copyright © Team Flative. All rights reserved.</div>
+    <div id="links" class="middle">
+        {% if site.github %}
+        <a id="link-github" href="http://github.com/{{ site.github.username }}" target="_blank">
+            <span class="sr-only">github</span>
+        </a>
+        {% endif %} {% if site.facebook %}
+        <a id="link-facebook" href="http://facebook.com/{{ site.facebook.username }}" target="_blank">
+            <span class="sr-only">facebook</span>
+        </a>
+        {% endif %} {% if site.twitter %}
+        <a id="link-twitter" href="http://twitter.com/{{ site.twitter.username }}" target="_blank">
+            <span class="sr-only">twitter</span>
+        </a>
+        {% endif %}
+        <a id="link-rss" href="/rss" target="_blank">
+            <span class="sr-only">rss</span>
+        </a>
+    </div>
+</div>
+<!--#footer-->
