@@ -2,7 +2,7 @@
 layout: default
 ---
 <div id="navbar" class="container">
-    <h5><a id="link-back" href="/">Back to Posts</a></h5>
+    <h5><a id="link-back" href="/">글 목록</a></h5>
     {% include share.html page=page %}
 </div>
 
@@ -32,7 +32,7 @@ layout: default
         </a>
         <p id="post-date">{{ page.date | date: '%Y-%m-%d %H:%M' }}</p>
         <a id="post-more" href="{{ author.url }}">
-            <span>Read more posts by this author</span>
+            <span>글 더보기</span>
         </a>
     </div>
 </div>
@@ -40,23 +40,21 @@ layout: default
 <div id="post-links" class="container">
     {% assign prev = page.previous %}
     {% if prev %}
-        <div id="post-prev"
-             {% if prev.image %}style="background-image: url({{ prev.image }});"{% endif %}>
-            <div>
-                <h3><a href="{{ prev.url }}">{{ prev.title }}</a></h3>
-                <p>YOU MIGHT ENJOY</p>
-            </div>
-        </div>
+      <a href="{{ prev.url }}" id="post-prev"{% if prev.image %} style="background-image: url({{ prev.image }});"{% endif %}>
+          <div>
+              <h3>{{ prev.title }}</h3>
+              <p>YOU MIGHT ENJOY</p>
+          </div>
+      </a>
     {% endif %}
     {% assign next = page.next %}
     {% if next %}
-        <div id="post-next"
-             {% if next.image %}style="background-image: url({{ next.image }});"{% endif %}>
-            <div>
-                <h3><a href="{{ next.url }}">{{ next.title }}</a></h3>
-                <p>NEXT POST</p>
-            </div>
+    <a href="{{ next.url }}" id="post-next"{% if next.image %} style="background-image: url({{ next.image }});"{% endif %}>
+        <div>
+            <h3>{{ next.title }}</h3>
+            <p>NEXT POST</p>
         </div>
+    </a>
     {% endif %}
 </div>
 

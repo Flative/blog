@@ -16,8 +16,9 @@ cover:
 
 ### Hello Flative!
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+안녕하세요. 스포카 개발팀의 박준규입니다.
 
+이번 PyCon APAC 2016에서 스포카가 개최한 코드 난독화 이벤트에 참여해주신 모든 분들께 감사의 말씀을 드립니다.
 
 
 > **This articles are translated to Korean with original author's([Emmanuel Goossaert](http://www.goossaert.com/)) permission. Really appreciate his effort and sharing.**

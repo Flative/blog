@@ -3,27 +3,32 @@
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Spoqa Han Sans';
+    font-family: "Spoqa Han Sans", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial, "Malgun Gothic", Dotum, sans-serif;
 }
 
 body {
-    font-weight: 300;
+    font-weight: 400;
     /* @@iolo 200 -> 300, 200 for retina only! */
     color: #505050;
     background-color: #f4f4f4;
 }
 
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+    font-weight: 700;
     color: #1e1e1e;
 }
 
 pre, code, tt, kbd {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 b, strong, optgroup {
-    font-weight: 400;
+    font-weight: 700;
 }
 
 a, a:link, a:visited, a:active, a:hover {
@@ -40,7 +45,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .container {
-    max-width: 940px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     padding-right: 5px;
@@ -115,22 +120,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     clear: both;
 }
 
-.left-lg {
-    float: left;
-}
-
-.middleOuter {
-  display: table;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-}
-
 
 /*
 for large screen(>=720px):
@@ -193,7 +182,6 @@ for small screen(<720px):
 #logo {
     position: absolute;
     top: 0;
-    left: 30px;
     width: 123px;
     height: 60px;
     margin: 0 0;
@@ -207,16 +195,16 @@ for small screen(<720px):
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: right;
 }
 
 #menu>li {
     list-style: none;
     display: inline-block;
     position: relative;
+    text-align: center;
     top: 1px;
     margin: 0;
-    border-bottom: 1px solid #e6e6e6;
     color: #505050;
     font-size: 15px;
     line-height: 59px;
@@ -277,7 +265,7 @@ for small screen(<720px):
 
 #content {
     background-color: #fff;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
 }
 
 #cover+#content {
@@ -286,7 +274,6 @@ for small screen(<720px):
 
 #back-to-top {
     display: none;
-    /* @@iolo: show/hide by js */
     position: fixed;
     width: 29px;
     height: 29px;
@@ -297,23 +284,12 @@ for small screen(<720px):
     background-size: 29px 29px;
 }
 
-#back-to-top.static {
-    position: static;
-    float: right;
-    margin-top: -49px;
-    margin-right: 30px;
-}
-
-
 /* footer */
 
 #footer {
-    position: absolute;
-    bottom: 0;
     border-top: 1px solid #e6e6e6;
-    background-color: #fff;
-    height: 70px;
-    line-height: 69px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 #footer>* {
@@ -324,6 +300,8 @@ for small screen(<720px):
 #links {
     float: right;
     text-align: right;
+    height: 70px;
+    line-height: 70px;
 }
 
 #footer-menu, #copyright {
@@ -373,6 +351,9 @@ for small screen(<720px):
 
 #copyright {
     float: left;
+    font-size: 11px;
+    height: 70px;
+    line-height: 70px;
 }
 
 
@@ -618,6 +599,9 @@ a.tag:active, a.tag:hover {
     background-color: #e6e6e6;
 }
 
+
+/* pagination */
+
 #pagination {
     margin: 0;
     padding: 33px 0;
@@ -629,27 +613,46 @@ a.tag:active, a.tag:hover {
     display: inline-block;
     height: 20px;
     width: 20px;
-    color: #1e1e1e;
     font-size: 14px;
     line-height: 18px;
+    color: #c0c0c0;
     /* 18px = 20(height) - 2(border) */
     vertical-align: middle;
 }
 
 
-/* pagination */
+/*
+<li class="page-number ">1</li>
+<li class="page-number active">2</li>
+<li class="page-number ">3</li>
+*/
+
+#pagination>.page-number {
+    cursor: pointer;
+    color: #c0c0c0;
+}
+
+#pagination>.page-number:not(.active):hover {
+    color: #1e1e1e;
+}
+
+#pagination>.page-number.active {
+    cursor: default;
+    color: #1e1e1e;
+}
 
 #pagination>li+li {
     margin-left: 10px;
 }
 
-#pagination>li.active, #pagination>li:hover {
+#pagination>li:not(.active):not(.disabled):hover {
+    cursor: pointer;
     background-color: #e6e6e6;
     border-radius: 4px;
 }
 
 #pagination>li>a {
-    color: #1e1e1e;
+    color: inherit;
     width: 100%;
     height: 100%;
     display: block;
@@ -658,11 +661,21 @@ a.tag:active, a.tag:hover {
 #page-prev {
     background: url(../images/pc/icon_pre.png) no-repeat center;
     background-size: 6px 11px;
+    color: #1e1e1e;
+}
+
+#page-prev.disabled {
+    background: none;
 }
 
 #page-next {
     background: url(../images/pc/icon_next.png) no-repeat center;
     background-size: 6px 11px;
+    color: #1e1e1e;
+}
+
+#page-next.disabled {
+    background: none;
 }
 
 
@@ -1000,8 +1013,6 @@ body.post-template #navbar, body.author-template #navbar, body.tag-template #nav
 }
 
 #post-links {
-    margin-top: 20px;
-    margin-bottom: 100px;
     padding: 0;
     display: table;
     width: 100%;
@@ -1123,497 +1134,4 @@ body.page-template {}
 
 #post-content.page {
     border-bottom: none;
-}
-
-
-/* minimal responsive stuff by @@iolo */
-
-@media only screen and (min-width: 720px) {
-    .visible-sm, .hidden-lg {
-        display: none !important;
-    }
-    #menu-toggle {
-        display: none;
-    }
-    #search-toggle {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    .visible-lg, .hidden-sm {
-        display: none !important;
-    }
-    .left-lg {
-        float: none;
-    }
-    /* header */
-    #header {
-        height: 50px;
-    }
-    #menu-toggle, #search-toggle {
-        position: absolute;
-        top: 0;
-        width: 50px;
-        height: 50px;
-        margin: 0;
-        padding: 0;
-        border: none;
-        outline: none;
-    }
-    #menu-toggle {
-        left: 0;
-        background: url(../images/mo/icon_menu.png) no-repeat center;
-        background-size: 22px 22px;
-    }
-    #search-toggle {
-        right: 0;
-        background: url(../images/mo/icon_search.png) no-repeat center;
-        background-size: 22px 22px;
-    }
-    #logo {
-        position: absolute;
-        display: inline-block;
-        left: 50px;
-        right: 50px;
-        top: 0;
-        height: 50px;
-        margin: 0 auto;
-        background-image: url(../images/Logo@2x.png);
-        background-size: 120px 27px;
-    }
-    #menu {
-        display: none;
-        /* @@iolo: show/hide by js */
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        /*height: 150px;*/
-        background: #fff;
-    }
-    #menu>li {
-        width: auto;
-        display: block;
-        height: 50px;
-        line-height: 50px;
-        border-bottom: none;
-    }
-    #menu>li.active, #menu>li:hover {
-        border-bottom: none;
-        background-color: #f4f4f4;
-    }
-    #search {
-        display: none;
-        /* @@iolo: show/hide by js */
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        text-align: center;
-    }
-    #search>input {
-        background-image: url(../images/mo/icon_search.png);
-    }
-    /* footer */
-    #links {
-        float: none;
-        padding-top: 10px;
-        text-align: center;
-    }
-    #links>li>a {
-        width: 27px;
-        height: 27px;
-        background-size: 27px 27px;
-    }
-    #links-github {
-        background-image: url(../images/mo/icon_git.png);
-    }
-    #links-facebook {
-        background-image: url(../images/mo/icon_face.png);
-    }
-    #links-twitter {
-        background-image: url(../images/mo/icon_twit.png);
-    }
-    #links-rss {
-        background-image: url(../images/mo/icon_rss.png);
-    }
-    #footer-menu {
-        margin-top: 20px;
-    }
-    #back-to-top {
-        width: 36px;
-        height: 36px;
-        right: 20px;
-        background-image: url(../images/mo/icon_uarrow.png);
-        background-size: 36px 36px;
-    }
-    #back-to-top.static {
-        margin-top: -49px;
-        margin-right: 20px;
-    }
-    /* cover */
-    #cover {
-        height: 170px !important;
-    }
-    #cover h1 {
-        font-size: 24px !important;
-        line-height: 29px !important;
-        /* 29px = 24(font-size) + 5(line-spacing) */
-    }
-    #cover p {
-        font-size: 12px !important;
-    }
-    #cover h1+p {
-        padding-top: 10px !important;
-    }
-    /* navbar */
-    #navbar {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    #link-back {
-        background-image: url(../images/mo/icon_larrow.png);
-        background-size: 10px 15px;
-    }
-    #shares>li>* {
-        width: 22px;
-        height: 22px;
-    }
-    #share-facebook {
-        background-image: url(../images/mo/share_face.png);
-        background-size: 22px 22px;
-    }
-    #share-twitter {
-        background-image: url(../images/mo/share_twit.png);
-        background-size: 22px 22px;
-    }
-    #share-google {
-        background-image: url(../images/mo/share_goo.png);
-        background-size: 22px 22px;
-    }
-    /* list(loop) */
-    #post-list .post-item {
-        margin: 0 15px;
-        padding: 30px 0;
-    }
-    #post-list .post-title, #post-list .post-excerpt, #post-list .post-tags {
-        margin: 0;
-    }
-    #post-list .post-title {
-        font-size: 18px;
-        line-height: 26px;
-        /* 26px = 18(font-size) + 8(spacing) */
-        max-height: 52px;
-        /* 2 lines */
-        display: -webkit-box;
-        /* multi-line ellipsis */
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        white-space: normal;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
-        overflow: hidden;
-    }
-    #post-list .post-excerpt {
-        margin-top: 20px;
-        font-size: 13px;
-        line-height: 21px;
-        /* 21px = 13(font-size) + 8(line-spacing) */
-        max-height: 84px;
-        /* 4 lines */
-        display: -webkit-box;
-        /* multi-line ellipsis */
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
-        overflow: hidden;
-    }
-    #post-list .post-tags {
-        margin-top: 15px;
-        margin-bottom: 20px;
-    }
-    #post-list .post-meta {
-        position: static;
-        width: 100%;
-        height: 32px;
-        /* @@black 22 -> 32 */
-    }
-    #post-list .author-image {
-        float: left;
-        width: 32px;
-        /* @@black 22 -> 32 */
-        height: 32px;
-        /* @@black 22 -> 32 */
-        background-image: url(../images/mo/default_pic_s.png);
-        background-size: cover;
-    }
-    #post-list .author-name {
-        float: left;
-        margin: 0 0 0 8px;
-        /* @@black 5 -> 8 */
-        font-size: 13px;
-        line-height: 32px;
-        /* .post-meta height */
-    }
-    #post-list .post-date {
-        float: right;
-        margin: 0;
-        font-size: 13px;
-        line-height: 32px;
-        /* .post-meta height  */
-    }
-    a.tag {
-        height: 20px;
-        margin: 0 8px 8px 0;
-        padding: 0 5px;
-        /* @@iolo */
-        border-radius: 2px;
-        line-height: 18px;
-        /* 18px = 20(height) - 2(border) */
-    }
-    /* pagination */
-    #pagination {
-        padding: 25px 0;
-        /* 25=50/2 */
-    }
-    #pagination>li {
-        width: 30px;
-        height: 30px;
-        line-height: 28px;
-        /* 28px = 30(height) - 2(border) */
-    }
-    #page-prev {
-        background-image: url(../images/mo/icon_larrow.png);
-        background-size: 10px 15px;
-    }
-    #page-next {
-        background-image: url(../images/mo/icon_rarrow.png);
-        background-size: 10px 15px;
-    }
-    /* home */
-    body.home-template {}
-    body.home-template #navbar, body.archive-template #navbar, body.page-template #navbar {
-        padding-top: 16px;
-        /* 40px(height) = 16 + 14 + 10 */
-        padding-bottom: 10px;
-    }
-    body.post-template #navbar, body.author-template #navbar, body.tag-template #navbar {
-        padding-top: 23px;
-        /* 60px(height) = ?(padding-top) + 22(share icon height) + 15(padding-bottom) */
-        padding-bottom: 15px;
-    }
-    /* post */
-    body.post-template {}
-    #post-content {
-        margin: 0 15px;
-        padding: 25px 0 40px 0;
-        text-align: left;
-    }
-    #post-footer {
-        height: 100px;
-        margin: 0 15px;
-    }
-    #author-image {
-        top: 25px;
-        /* 25px = 100(#post-footer height) - 50(#author-image height) / 2 */
-        width: 50px;
-        height: 50px;
-        background-image: url(../images/mo/default_pic_s.png);
-        background-size: cover;
-    }
-    #author-name {
-        top: 34px;
-        /* 100 = a + (14 + 6 + 12) + a, a = (100 - (14 + 6 + 12)) / 2, a = 34px */
-        left: 60px;
-        /* 60px = 50(#author-image width) + 10(spacing) */
-    }
-    #post-date {
-        top: 54px;
-        /* 54px = 34(#author-name top) + 14(#author-name height) + 6(spacing) */
-        left: 60px;
-        /* 60px = (#author-name left) */
-    }
-    #post-more {
-        height: 100px;
-        line-height: 100px;
-        padding-right: 20px;
-        /* 20px = 10(spacing) + 10(icon width) */
-        background-image: url(../images/mo/icon_rarrow.png);
-        background-size: 10px 15px;
-    }
-    #post-more>span {
-        display: none;
-    }
-    #post-links {
-        margin-top: 1em;
-        display: block;
-    }
-    #post-prev, #post-next {
-        display: block;
-        width: 100%;
-    }
-    #post-links h3 {
-        line-height: 100px;
-    }
-    #post-links p {}
-    /* author */
-    body.author-template {}
-    body.author-template #cover h1, body.author-template #cover p {
-        max-width: 193px;
-        /* 386/2 */
-        width: 100%;
-        /* @@iolo */
-        margin-left: 102px;
-        /* 254px = 15(padding-left) + 72(#cover-author-image width) + 15(spacing) */
-        text-align: left;
-    }
-    #cover-author-image {
-        position: absolute;
-        left: 15px;
-        /* 30/2 */
-        top: 49px;
-        /* 49px = (170(#cover height) - 72(self height)) / 2 */
-        width: 72px;
-        height: 72px;
-        background-image: url(../images/mo/default_pic_l.png);
-        background-size: cover;
-    }
-    /* tag */
-    body.tag-template {}
-    /* page */
-    body.page-template {}
-    #forkme {
-        margin-right: -20px;
-    }
-}
-
-
-/* responsive images - mobile(2x) */
-
-@media (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-weight: 200;
-        /* @@iolo 200 for retina only! */
-    }
-    #logo {
-        background-image: url(../images/Logo@2x.png);
-    }
-    #menu-toggle {
-        background-image: url(../images/mo/icon_menu@2x.png);
-    }
-    #search-toggle {
-        background-image: url(../images/mo/icon_search@2x.png);
-    }
-    #search>input {
-        background-image: url(../images/mo/icon_search@2x.png);
-    }
-    #back-to-top {
-        background-image: url(../images/mo/icon_uarrow@2x.png);
-    }
-    #page-prev {
-        background-image: url(../images/mo/icon_larrow@2x.png);
-    }
-    #page-next {
-        background-image: url(../images/mo/icon_rarrow@2x.png);
-    }
-    #link-github {
-        background-image: url(../images/mo/icon_git@2x.png);
-    }
-    #link-facebook {
-        background-image: url(../images/mo/icon_face@2x.png);
-    }
-    #link-twitter {
-        background-image: url(../images/mo/icon_twit@2x.png);
-    }
-    #link-rss {
-        background-image: url(../images/mo/icon_rss@2x.png);
-    }
-    #link-back {
-        background-image: url(../images/mo/icon_larrow@2x.png);
-    }
-    #share-facebook {
-        background-image: url(../images/mo/share_face@2x.png);
-    }
-    #share-twitter {
-        background-image: url(../images/mo/share_twit@2x.png);
-    }
-    #share-google {
-        background-image: url(../images/mo/share_goo@2x.png);
-    }
-    #post-list .author-image {
-        background-image: url(../images/mo/default_pic_s@2x.png);
-    }
-    #author-image {
-        background-image: url(../images/mo/default_pic_s@2x.png);
-    }
-    #cover-author-image {
-        background-image: url(../images/mo/default_pic_l@3x.png);
-    }
-}
-
-
-/* responsive images - mobile(3x) */
-
-@media (-webkit-min-device-pixel-ratio: 3) {
-    body {
-        font-weight: 200;
-        /* @@iolo 200 for retina only! */
-    }
-    #logo {
-        background-image: url(../images/Logo@3x.png);
-    }
-    #menu-toggle {
-        background-image: url(../images/mo/icon_menu@3x.png);
-    }
-    #search-toggle {
-        background-image: url(../images/mo/icon_search@3x.png);
-    }
-    #search>input {
-        background-image: url(../images/mo/icon_search@3x.png);
-    }
-    #back-to-top {
-        background-image: url(../images/mo/icon_uarrow@3x.png);
-    }
-    #page-prev {
-        background-image: url(../images/mo/icon_larrow@3x.png);
-    }
-    #page-next {
-        background-image: url(../images/mo/icon_rarrow@3x.png);
-    }
-    #link-github {
-        background-image: url(../images/mo/icon_git@3x.png);
-    }
-    #link-facebook {
-        background-image: url(../images/mo/icon_face@3x.png);
-    }
-    #link-twitter {
-        background-image: url(../images/mo/icon_twit@3x.png);
-    }
-    #link-rss {
-        background-image: url(../images/mo/icon_rss@3x.png);
-    }
-    #link-back {
-        background-image: url(../images/mo/icon_larrow@3x.png);
-    }
-    #share-facebook {
-        background-image: url(../images/mo/share_face@3x.png);
-    }
-    #share-twitter {
-        background-image: url(../images/mo/share_twit@3x.png);
-    }
-    #share-google {
-        background-image: url(../images/mo/share_goo@3x.png);
-    }
-    #post-list .author-image {
-        background-image: url(../images/mo/default_pic_s@3x.png);
-    }
-    #author-image {
-        background-image: url(../images/mo/default_pic_s@3x.png);
-    }
-    #cover-author-image {
-        background-image: url(../images/mo/default_pic_l@3x.png);
-    }
 }

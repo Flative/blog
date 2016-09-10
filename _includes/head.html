@@ -50,10 +50,13 @@
 {% if page.author %}
 <meta property="article:author" content="{{ site.url }}{{ site.baseurl }}/authors/{{ page.author }}"/>
 {% endif %}
-<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
 <link href="{{ site.url }}/rss/" rel="alternate" type="application/rss+xml" title="RSS"/>
 <link href="{{ site.asset_url }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
 <link href="{{ site.asset_url }}/lib/normalize.css" rel="stylesheet" type="text/css"/>
 <link href="{{ site.asset_url }}/css/monokai.css" rel="stylesheet" type="text/css"/>
 <link href="{{ site.asset_url }}/lib/magnific-popup.min.css" rel="stylesheet" type="text/css"/>
-<link href="{{ site.asset_url }}/css/screen.css" rel="stylesheet" type="text/css"/>
+<link href="{{ site.asset_url }}/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="{{ site.asset_url }}/css/desktop.css" rel="stylesheet" type="text/css"/>
+<link href="{{ site.asset_url }}/css/mobile.css" rel="stylesheet" type="text/css"/>
+<link href="{{ site.asset_url }}/css/retina.css" rel="stylesheet" type="text/css"/>
+<link href='{{ site.asset_url }}/css/spoqa.css' rel='stylesheet' type='text/css' media='none' onload="this.media='all';">
