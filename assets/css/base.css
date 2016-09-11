@@ -776,15 +776,10 @@ body.home-template #cover, body.archive-template #cover, body.page-template #cov
 }
 
 body.home-template #cover {
-    background-image: url(../images/default_blog_cover.jpg);
 }
 
 body.post-template #cover {
     background-image: url(../images/default_post_cover.jpg);
-}
-
-body.page-template #cover {
-    background-image: url(../images/default_page_cover.jpg);
 }
 
 body.author-template #cover {
