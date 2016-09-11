@@ -76,7 +76,7 @@ $ git push origin master
  - author: `lastname.firstname` # 필자(필수). 왠만하면 회사 아이디(예: iolo.fitzowen) 사용
  - tags: `[tag1,tag2,tag3,...]` # 태그 목록(선택). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
  - image: http://... # 커버이미지 url(선택)
- - date: `YYYY-MM-DD HH:MM:SS` # 발행일(필수)
+ - date: `YYYY-MM-DD` # 발행일(필수)
 3. 처음 글을 쓰는 필자이라면 **글쓴이 등록**(필수)
 4. 유력한(?) 태그가 새로 등장했다면 **태그 등록**(선택)
 
@@ -115,4 +115,3 @@ May the **SOURCE** be with you...
 [gfm]: https://guides.github.com/features/mastering-markdown/
 [kramdown]: http://kramdown.gettalong.org
 [rouge]: http://rouge.jneen.net
-

@@ -19,12 +19,19 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: #1e1e1e;
+    font-weight: 200;
 }
 
 pre, code, tt, kbd {
     font-weight: 400;
+}
+
+code.highlighter-rouge {
+    color: #f8f8f2;
+    background-color: #49483e;
+    border: 1px solid #d4d4d4;
+    padding: 0 7px;
+    border-radius: 3px;
 }
 
 b, strong, optgroup {
@@ -283,6 +290,7 @@ for small screen(<720px):
     background: url(../images/pc/icon_uarrow.png) no-repeat;
     background-size: 29px 29px;
 }
+
 
 /* footer */
 
@@ -966,6 +974,16 @@ body.post-template #navbar, body.author-template #navbar, body.tag-template #nav
     position: relative;
     height: 120px;
     margin: 0 80px;
+}
+
+#author-title-image {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: url(../images/pc/default_pic_s.png) no-repeat center;
+    background-size: cover;
 }
 
 #author-image {
