@@ -386,7 +386,16 @@ for small screen(<720px):
     z-index: 2;
 }
 
-#cover h1, #cover p {
+#cover #author-email {
+  padding: 5px;
+  font-weight: 200;
+}
+
+#cover #author-email+#author-links {
+  padding-top: 15px;
+}
+
+#cover h1, #cover p, #cover #author-email {
     width: 80%;
     /* @@iolo */
     max-width: 780px;
@@ -404,12 +413,13 @@ for small screen(<720px):
 }
 
 #cover p {
+    padding-left: 5px;
     font-size: 14px;
     line-height: 22px;
     /* 22px = 14(font-size) + 8(line-spacing) @@iolo */
 }
 
-#cover h1+p {
+#cover #author-links+p {
     padding-top: 14px;
     /* 14px = 30 - 16(above line-spacing) */
 }
@@ -502,6 +512,38 @@ for small screen(<720px):
     background-size: 20px 20px;
 }
 
+#author-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#author-links>li {
+    list-style: none;
+    display: inline;
+}
+
+#author-links>li>* {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+#author-links>li>a {
+    cursor: pointer;
+}
+
+#author-links-facebook {
+    background: url(../images/author-facebook.png) no-repeat;
+    background-size: 20px 20px;
+}
+
+#author-links-github {
+    background: url(../images/author-github.png) no-repeat;
+    background-size: 20px 20px;
+}
 
 /* list(loop) */
 
@@ -1108,13 +1150,21 @@ body.post-template #navbar, body.author-template #navbar, body.tag-template #nav
 
 body.author-template {}
 
-body.author-template #cover h1, body.author-template #cover p {
+body.author-template #cover h1, body.author-template #cover #author-email, body.author-template #cover p {
     max-width: 606px;
     width: 100%;
     /* @@iolo */
     margin-left: 254px;
     /* 254px = 80(padding-left) + 144(#cover-author-image width) + 30(spacing) */
     text-align: left;
+}
+
+body.author-template #cover #author-links {
+    max-width: 606px;
+    width: 100%;
+    margin-left: 254px;
+    text-align: left;
+    padding-top: 7px;
 }
 
 #cover-author-image {

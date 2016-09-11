@@ -1,31 +1,42 @@
 ---
 layout: default
 ---
+
 <div id="navbar" class="container">
-    <h5><a id="link-back" href="/">글 목록</a></h5>
-    {% include share.html %}
+    <h5><a id="link-back" href="/">글 목록</a></h5> {% include share.html %}
 </div>
 
-<div id="cover" class="container"
-     {% if page.cover %}style="background-image: url({{ page.cover }});"{% endif %}>
+<div id="cover" class="container" {% if page.cover %}style="background-image: url({{ page.cover }});" {% endif %}>
     <div>
-        <div id="cover-author-image"
-             {% if page.image %}style="background-image:url({{ page.image }});"{% endif %}>
+        <div id="cover-author-image" {% if page.image %}style="background-image:url({{ page.image }});" {% endif %}>
             <span class="sr-only">{{ page.name }}'s profile image</span>
         </div>
         <h1>{{ page.title | default: page.name }}</h1>
-        <p>All Posts by <em>{{ page.name }}</em></p>
+        {% if page.email %}
+          <div id="author-email">{{ page.email }}</div>
+        {% endif %}
+        <ul id="author-links">
+          {% if page.facebook %}
+            <li>
+                <a id="author-links-facebook" target="_blank" href="{{ page.facebook }}">
+                    <span class="sr-only">Facebook</span>
+                </a>
+            </li>
+            {% endif %}{% if page.github %}
+            <li>
+                <a id="author-links-github" target="_blank" href="{{ page.github }}">
+                    <span class="sr-only">Github</span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
     </div>
 </div>
 
 <div id="content" class="container">
     <div id="author-content" role="main">
         <ul id="post-list">
-            {% for post in site.posts %}
-                {% if post.author == page.name %}
-                    {% include item.html %}
-                {% endif %}
-            {% endfor %}
+            {% for post in site.posts %} {% if post.author == page.name %} {% include item.html %} {% endif %} {% endfor %}
         </ul>
         {% include pagination.html %}
     </div>
