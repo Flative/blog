@@ -40,7 +40,7 @@ $ open http://localhost:4000
 2. 파일 상단에 [front matter] 작성
  - layout: post # 레이아웃(필수). `page` 레이아웃을 사용하면 목록에 보이지 않는 글을 쓸 수 있음.
  - title: '제목' # 제목(필수)
- - author: `lastname.firstname` # 필자(필수). 왠만하면 회사 아이디(예: iolo.fitzowen) 사용
+ - author: `username` # 필자(필수).
  - tags: `[tag1,tag2,tag3,...]` # 태그 목록(선택). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
  - image: http://... # 커버이미지 url(선택)
  - date: `YYYY-MM-DD` # 발행일(필수)
