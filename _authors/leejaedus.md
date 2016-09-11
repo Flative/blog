@@ -1,4 +1,5 @@
 ---
+layout: author
 name: 이재연
 title: 이재연
 email: leejaeduss@gmail.com
