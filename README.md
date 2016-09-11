@@ -44,10 +44,10 @@ $ open http://localhost:4000
  - tags: `[tag1,tag2,tag3,...]` # 태그 목록(선택). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
  - image: http://... # 커버이미지 url(선택)
  - date: `YYYY-MM-DD` # 발행일(필수)
-3. 처음 글을 쓰는 필자이라면 [**필자 등록**](#create-writer)(필수)
-4. 유력한(?) 태그가 새로 등장했다면 [**태그 등록**](#create-tag)(선택)
+3. 처음 글을 쓰는 필자이라면 [**필자 등록**](#필자-등록)(필수)
+4. 유력한(?) 태그가 새로 등장했다면 [**태그 등록**](#태그-등록)(선택)
 
-### <a name="create-writer"></a>필자 등록
+### 필자 등록
 
 1. `_authors` 디렉토리에 `username.md` 이름으로 필자 정보 파일 추가
  - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://flative.github.io/authors/username/
@@ -61,7 +61,7 @@ $ open http://localhost:4000
  - github: ex) https://github.com/leejaedus
 3. 내용은 필요없음
 
-### <a name="create-tag"></a>태그 등록
+### 태그 등록
 
 1. `_tags` 디렉토리에 `tag-name.md` 이름으로 필자 정보 파일 추가
  - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://flative.github.io/tags/tag-name/
