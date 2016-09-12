@@ -126,6 +126,9 @@
     #cover h1+p {
         padding-top: 10px !important;
     }
+    #cover #author-email {
+        padding-top: 10px;
+    }
     /* navbar */
     #navbar {
         padding-left: 15px;
@@ -322,7 +325,7 @@
     #post-links p {}
     /* author */
     body.author-template {}
-    body.author-template #cover h1, body.author-template #cover p {
+    body.author-template #cover h1, body.author-template #cover p, body.author-template #cover #author-email, body.author-template #cover #author-links {
         max-width: 193px;
         /* 386/2 */
         width: 100%;
