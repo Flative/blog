@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '크롬 페이지를 사파리로 열기'
+title: '[iOS] 크롬 페이지를 사파리로 열기'
 author: 이재연
 date: 2016-09-13
 tags: [iOS]
