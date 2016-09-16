@@ -4,7 +4,7 @@ description: |
   Connect Everything 새로운 연결, 새로운 세상.
   연결의 혁신으로 세상은 더욱 가깝고 새로워진다고 Flative는 믿습니다.
 baseurl: 'http://flative.github.io'
-url: 'http://flative.github.io'
+url: ''
 
 repository: flative/flative.github.io
 
