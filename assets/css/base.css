@@ -26,11 +26,23 @@ pre, code, tt, kbd {
     font-weight: 400;
 }
 
+code::before, code::after, tt::before, tt::after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
+}
+
 code.highlighter-rouge {
-    color: #f8f8f2;
+    /*color: #f8f8f2;
     background-color: #49483e;
     border: 1px solid #d4d4d4;
     padding: 0 7px;
+    border-radius: 3px;*/
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(0, 0, 0, 0.04);
     border-radius: 3px;
 }
 
@@ -387,12 +399,12 @@ for small screen(<720px):
 }
 
 #cover #author-email {
-  padding: 5px;
-  font-weight: 200;
+    padding: 5px;
+    font-weight: 200;
 }
 
 #cover #author-email+#author-links {
-  padding-top: 15px;
+    padding-top: 15px;
 }
 
 #cover h1, #cover p, #cover #author-email {
@@ -544,6 +556,7 @@ for small screen(<720px):
     background: url(../images/author-github.png) no-repeat;
     background-size: 20px 20px;
 }
+
 
 /* list(loop) */
 
@@ -775,8 +788,7 @@ body.home-template #cover, body.archive-template #cover, body.page-template #cov
     height: 460px;
 }
 
-body.home-template #cover {
-}
+body.home-template #cover {}
 
 body.post-template #cover {
     background-image: url(../images/default_post_cover.jpg);
