@@ -2,7 +2,7 @@
 layout: post
 title: 'Jekyll + GitHub Pages 의존성 쉽게 관리하기'
 author: 이현수
-date: 2016-09-11
+date: 2016-09-23
 tags: [jekyll, github-pages]
 ---
 
