@@ -590,6 +590,7 @@ for small screen(<720px):
 
 #post-list .post-excerpt {
     margin-top: 22px;
+    padding-bottom: 2px;
     font-size: 14px;
     line-height: 24px;
     /* 24px = 14(font-size) + 10(line-spacing) */
