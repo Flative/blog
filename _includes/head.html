@@ -4,6 +4,7 @@
 {% if page.layout == 'post' or page.layout == 'page' %}
 {% assign meta_title = page.title %}
 {% assign meta_author = page.author | default: site.author %}
+{% assign meta_keywords = page.tags | join: ' '%}
 {% assign meta_description = page.excerpt | strip_html | truncatewords: 75 %}
 {% assign meta_url = site.url | append: site.baseurl | append: page.url %}
 {% assign meta_image = page.image | default: site.image %}
@@ -11,6 +12,7 @@
 {% else %}
 {% assign meta_title = site.title %}
 {% assign meta_author = site.author %}
+{% assign meta_keywords = site.keywords %}
 {% assign meta_description = site.description | strip_html %}
 {% assign meta_url = site.url %}
 {% assign meta_image = site.image %}
@@ -21,10 +23,8 @@
 {% endunless %}
 <meta name="title" content="{{ meta_title }}" />
 <meta name="author" content="{{ meta_author }}"/>
+<meta name="keywords" content="{{ meta_keywords }}"/>
 <meta name="description" content="{{ meta_description }}"/>
-{% if site.facebook.app_id %}
-<meta property="fb:app_id" content="{{ site.facebook.app_id }}"/>
-{% endif %}
 <meta property="og:site_name" content="{{ site.title }}"/>
 <meta property="og:type" content="{{ meta_type }}"/>
 <meta property="og:title" content="{{ meta_title }}"/>
