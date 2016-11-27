@@ -16,20 +16,20 @@ tags: [python, crawler]
 그리고 간단하게 크롤러 만드는 방법과 기술을 공유하고자 하여 이 글을 작성하게 되었습니다. 
  
 
-## 라이브러리 
+## 사용 라이브러리 
 
   **라이브러리 목록 :**
 
 1. BeautifulSoup : HTML 코드를 개발자가 보기 좋게 파싱하는 라이브러리입니다. 
 2. Requests : 파이썬으로 HTTP 요청을 보내고 받을 수 있는 라이브러리 입니다   .
 
-간단하게 Requests를 통해 웹페이지에 요청을 보내어 BeautifulSoup를 통해 HTML 코드를 파싱을 하여 필요 정보를 추출 해내는 것입니다.
+간단하게 설명하자면 Requests를 통해 웹페이지에 요청을 보내어 BeautifulSoup를 통해 HTML 코드를 파싱을 하여 필요 정보를 추출 해내는 것입니다.
 
 ## BeautifulSoup 사용하여 크롤러 만들기
 
 아래의 코드을 통해 requests를 통해 요청을 주고 받은 후 돌려 받은 데이터를 BeautifulSoup와 lxml를 이용하여 파싱을 진행하였습니다.
 BeautifulSoup에서 기본으로 제공을 해주는 html.parser 란 것이 있는데 그 보다 **lxml** 파서가 더 좋다는 이야기를 들어 해당 파서를 사용하였습니다. 
-관련된 내용은 추후 작성 할 수 있다면 새로 작성하도록 하겠습니다.
+관련된 내용은 추후 작성 할 수 있다면 포스팅을 하도록 하겠습니다.
 
 
 ```python
@@ -68,7 +68,7 @@ musical_member_list = musical_soup.select('li.members > div > a')
 
 
 ## 뮤지컬 크롤러 결과 화면
-만들 때 고생 많이 했는데 출력되는 결과물 보고 뿌듯 했습니다. (수준 인증)
+정말 별것도 아닌데 출력되는 결과물 보고 뿌듯 했습니다. 
 ![](/static/images/2016-11-27-simple-crawler/result.png)
 
 
