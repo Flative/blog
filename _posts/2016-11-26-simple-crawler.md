@@ -3,7 +3,7 @@ layout: post
 title: '[Python] 간단한 크롤러 만들기'
 author: 최현빈
 date: 2016-11-26
-tags: [python], [crawler]
+tags: [python, crawler]
 ---
 
 ## 서문
