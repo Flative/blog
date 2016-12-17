@@ -25,12 +25,6 @@ $ bundle exec jekyll serve
 $ open http://localhost:4000
 ```
 
-### 새 글 작성
-
-1. `_draft` 디렉토리에 `적당한이름.md` 이름으로 파일을 만들고
-2. 포스트를 마크다운으로 작성
-  - gfm 문법, kramdown 파서, rouge 문법강조기 사용
-
 ### 글 쓰기
 
 1. `_posts` 디렉토리에 `yyyy-mm-dd-slug.md` 파일로 복사(or 이동).
@@ -43,6 +37,7 @@ $ open http://localhost:4000
  - author: `username` # 필자(필수).
  - tags: `[tag1,tag2,tag3,...]` # 태그 목록(선택). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
  - image: http://... # 커버이미지 url(선택)
+ - draft: `draft: true` 를 적지 않으면 글 목록에 표시가 되니, 임시 글일 경우에 꼭 표시하기
  - date: `YYYY-MM-DD` # 발행일(필수)
 3. 처음 글을 쓰는 필자이라면 [**필자 등록**](#필자-등록)(필수)
 4. 유력한(?) 태그가 새로 등장했다면 [**태그 등록**](#태그-등록)(선택)
