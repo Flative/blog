@@ -7,13 +7,13 @@ flative.github.io
 
 ### 설치
 
-<https://github.com/flative/flative.github.io> 에 push 권한이 있다면:
+<https://github.com/flative/blog.flative.io> 에 push 권한이 있다면:
 
 1. git fetch or pull or clone
 2. [Jekyll] 설치
 
 ```console
-$ git clone git@github.com:flative/flative.github.io.git
+$ git clone git@github.com:flative/blog.flative.io.git
 $ cd flative.github.io
 $ bundle install
 ```
@@ -45,7 +45,7 @@ $ open http://localhost:4000
 ### 필자 등록
 
 1. `_authors` 디렉토리에 `username.md` 이름으로 필자 정보 파일 추가
- - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://flative.github.io/authors/username/
+ - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://blog.flaitve.io/authors/username/
 2. 파일 상단에 [front matter] 작성
  - layout: author
  - name: ex) leejaedus
@@ -59,7 +59,7 @@ $ open http://localhost:4000
 ### 태그 등록
 
 1. `_tags` 디렉토리에 `tag-name.md` 이름으로 필자 정보 파일 추가
- - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://flative.github.io/tags/tag-name/
+ - 참고: 최종적으로 사용자 포스트 목록 페이지의 url은 http://blog.flative.io/tags/tag-name/
 2. 파일 상단에 [front matter] 작성
  - layout: tag # 레이아웃(필수)
  - name: `tag-name` # post의 tags 배열의 항목과 매칭(필수). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
