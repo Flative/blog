@@ -53,10 +53,6 @@ $ bundle exec jekyll serve
 
 ---
 
-문의: <leejaeduss@gmail.com>
-
-May the **SOURCE** be with you...
-
 [GitHub Pages]: https://pages.github.com
 [Jekyll]: https://jekyllrb.com
 [front matter]: https://jekyllrb.com/docs/frontmatter/
