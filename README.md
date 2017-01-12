@@ -1,28 +1,13 @@
 blog.flative.io
 ==============
 
-> 주의: [GitHub Pages]와 [Jekyll]에 대해서 충분히 숙지할 것.
-> 주의: [Collaborating on projects using issues and pull requests](https://help.github.com/categories/collaborating-on-projects-using-issues-and-pull-requests/)을 정독.
-
-
-### 설치
-
-<https://github.com/flative/blog.flative.io> 에 push 권한이 있다면:
-
-1. git fetch or pull or clone
-2. [Jekyll] 설치
+### 시작하기
 
 ```console
 $ git clone git@github.com:flative/blog.flative.io.git
 $ cd flative.github.io
 $ bundle install
-```
-
-### 실행(로컬)
-
-```
 $ bundle exec jekyll serve
-$ open http://localhost:4000
 ```
 
 ### 글 쓰기
