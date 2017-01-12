@@ -10,6 +10,8 @@ $ bundle install
 $ bundle exec jekyll serve
 ```
 
+> `bundle install` 진행중 에러 발생시 [이곳](https://github.com/SlatherOrg/slather/issues/227)을 참고하세요
+
 ### 글 쓰기
 
 1. `_posts` 디렉토리에 `yyyy-mm-dd-slug.md` 파일로 복사(or 이동).
