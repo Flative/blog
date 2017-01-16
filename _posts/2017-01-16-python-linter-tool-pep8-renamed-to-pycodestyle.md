@@ -5,7 +5,6 @@ author: 최민석
 image: /static/covers/python-logo.png
 date: 2017-01-16
 tags: [python]
-draft: true
 ---
 안녕하세요. Flative의 최민석 입니다.
 
@@ -35,7 +34,7 @@ Flative에서 새로 준비하고 있는 프로젝트(가제: 혼밥남녀)에 C
 라고 제안하고.
 
 결국 `pycodestyle`로 이름이 바뀌었습니다
-
+![Finally renamed](/static/images/2017-01-16-python-linter-tool-pep8-renamed-to-pycodestyle/finally.png)
 이 과정을 쭉 지켜보니 느낀점들이
 
 * 네이밍은 신중하게, 그리고 명확하게
