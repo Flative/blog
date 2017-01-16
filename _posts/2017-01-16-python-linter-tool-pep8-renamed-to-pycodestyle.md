@@ -5,6 +5,7 @@ author: 최민석
 image: /static/covers/python-logo.png
 date: 2017-01-16
 tags: [python]
+draft: true
 ---
 안녕하세요. Flative의 최민석 입니다.
 
