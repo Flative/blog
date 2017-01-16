@@ -2,6 +2,7 @@
 layout: post
 title: '[Python] 왜 pep8은 pycodestyle이 되었을까?'
 author: 최민석
+image: /static/covers/python-logo.png
 date: 2017-01-16
 tags: [python]
 ---
