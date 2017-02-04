@@ -23,7 +23,7 @@ Flative에서 새로 준비하고 있는 프로젝트(가제: 혼밥남녀)에 C
 
 > gvanrossum: PEP라는 이름을 사용하면 안된다. Python style guide는 사람을 위해 쓰여진거고 여러 섬세한? 미묘한 부분들이 있다.  `pep8`(linter)에 문제가 있으면 사람들은 이게 tool의 문제가 아닌 PEP의 문제로 인식할 수 있다.  
 >
-> sigmavirus24: 많은 프로젝트들이 `flake8`을 활용하고 있고. 대부분 `pep8`이 PEP-0008에서 영감을 받은 linter라는것을 알고 있을것이다.   
+> sigmavirus24: 많은 프로젝트들이 `flake8`을 활용하고 있고. 대부분 `pep8`이 [PEP-0008](https://www.python.org/dev/peps/pep-0008/)에서 영감을 받은 linter라는것을 알고 있을것이다.  
 
 또
 
