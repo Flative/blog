@@ -8,7 +8,7 @@ tags: [python]
 ---
 안녕하세요. Flative의 최민석 입니다.
 
-사실 제목의 `pep8`은 PEP-0008문서가 아닌, Python linter tool `pep8`입니다.
+사실 제목의 `pep8`은 [PEP-0008](https://www.python.org/dev/peps/pep-0008/)문서가 아닌, Python linter tool `pep8`입니다.
 
 Flative에서 새로 준비하고 있는 프로젝트(가제: 혼밥남녀)에 CI를 붙이면서 이왕이면 코드도 보다 효율적으로, 일관된 규칙으로 짜기 위해 linter를 붙이려고 `pep8`, `flake8`, `pylint`등등 여러가지 린터들을 찾아보고 비교하고 있던중 본 이야기를 공유하려 합니다.
 
