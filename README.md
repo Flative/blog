@@ -5,7 +5,7 @@ blog.flative.io
 
 ```console
 $ git clone git@github.com:flative/blog.flative.io.git
-$ cd flative.github.io
+$ cd blog.flative.io
 $ bundle install
 $ bundle exec jekyll serve
 ```
