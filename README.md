@@ -17,7 +17,7 @@ $ bundle exec jekyll serve
 1. `_posts` 디렉토리에 `yyyy-mm-dd-slug.md` 파일로 복사(or 이동).
  - slug: 해당 포스트의 고유 키로 url의 일부로 사용. 왠만하면 특수문자없이 영문자,숫자,-(하이픈),.(점)...만 사용.
  - yyyy,mm,dd: 발행 년,월,일.
- - 참고: 최종적으로 포스트의 url(permalink)는 http://flative.github.io/yyyy/mm/dd/slug/
+ - 참고: 최종적으로 포스트의 url(permalink)는 http://blog.flaitve.io/yyyy/mm/dd/slug/
 2. 파일 상단에 [front matter] 작성
  - layout: post # 레이아웃(필수). `page` 레이아웃을 사용하면 목록에 보이지 않는 글을 쓸 수 있음.
  - title: '제목' # 제목(필수)
