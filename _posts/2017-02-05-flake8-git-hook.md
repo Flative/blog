@@ -5,7 +5,6 @@ author: 최민석
 image: /static/covers/python-logo.png
 date: 2017-02-05
 tags: [python]
-draft: true
 ---
 
 안녕하세요. Flative의 최민석 입니다.
@@ -107,7 +106,7 @@ def update_excludes(exclude_list, temporary_directory_path):
 
 그래도 다음 버전이 나오기 전까지 사용할 수 있는. 위 문제들을 해결한 pre-commit-installer 스크립트를 만들었으니. 필요하신 분들께 도움이 되었으면 합니다.
 
-[pre-commit-installer.py](https://gist.githubusercontent.com/Curzy/2381055de0ec160ec0b69d325f7e5ef9/raw/542bb8aa5659ab724e154905e1698c309fa7f3e6/pre-commit-installer.py)
+[pre-commit-installer.py](https://gist.github.com/Curzy/2381055de0ec160ec0b69d325f7e5ef9)
 위 스크립트 파일 다운받고,
 
 ```bash
