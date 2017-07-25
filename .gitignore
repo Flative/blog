@@ -4,3 +4,5 @@ _site
 .idea
 .bundle
 .DS_Store
+.ruby-version
+.ruby-gemset
