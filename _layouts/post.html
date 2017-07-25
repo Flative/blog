@@ -35,29 +35,18 @@ layout: default
             <span>글 더보기</span>
         </a>
     </div>
-</div>
+    <div id="post-comments">
+        <div id="fb-root"></div>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.10&appId=1912701068984897";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
 
-<div id="post-links" class="container">
-    {% assign prev = page.previous %}
-    {% if prev %}
-      <a href="{{ prev.url }}" id="post-prev"{% if prev.image %} style="background-image: url({{ prev.image }});"{% endif %}>
-          <div>
-              <h3>{{ prev.title }}</h3>
-              <p>YOU MIGHT ENJOY</p>
-          </div>
-      </a>
-    {% endif %}
-    {% assign next = page.next %}
-    {% if next %}
-    <a href="{{ next.url }}" id="post-next"{% if next.image %} style="background-image: url({{ next.image }});"{% endif %}>
-        <div>
-            <h3>{{ next.title }}</h3>
-            <p>NEXT POST</p>
-        </div>
-    </a>
-    {% endif %}
-</div>
-
-<div id="lightbox">
-    <div id="lightbox-image"></div>
+        <div class="fb-comments" data-href="{{ site.url | append: site.baseurl | append: page.url }}" data-width="100%" data-numposts="5"></div>
+    </div>
 </div>

@@ -1027,6 +1027,10 @@ body.post-template #navbar, body.author-template #navbar, body.tag-template #nav
     margin: 0 80px;
 }
 
+#post-comments {
+    margin: 50px 80px;
+}
+
 #author-title-image {
     margin-bottom: 20px;
     display: inline-block;
