@@ -7,14 +7,16 @@ layout: null
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for post in site.posts %}
-  <url>
-    <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
-    {% if post.date %}
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% if post.draft == blank or post.draft != true %}
+      <url>
+        <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+        {% if post.date %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+      </url>
     {% endif %}
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
   {% endfor %}
   {% for page in site.pages %}
   {% if page.sitemap %}
