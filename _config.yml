@@ -3,8 +3,8 @@ email: flative.dev@gmail.com
 description: |
   Flative 기술 블로그입니다. 프로젝트를 통해 얻게되는 경험이나 생각들을 공유합니다.
 keywords: 'flative 기술 블로그 기술블로그'
-baseurl: ''
-url: 'http://blog.flative.io'
+baseurl: 'blog'
+url: 'https://flative.github.io/'
 
 repository: flative/blog.flative.io
 

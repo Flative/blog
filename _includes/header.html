@@ -3,13 +3,13 @@
         <button id="menu-toggle" type="button">
         <span class="sr-only">Toggle Navigation Menu</span>
     </button>
-        <a id="logo" href="/">
+        <a id="logo" href="{{ site.url }}{{ site.baseurl }}">
             <span class="sr-only">Flative 기술 블로그</span>
         </a>
         <ul id="menu" class="nav">
-            <li class="{% if page.url != '/opensource/' and page.url != '/team/' %} active {% endif %}"><a href="{{ base_path }}/">블로그</a></li>
-            <!-- <li class="{% if page.url == '/opensource/' %} active {% endif %}"><a href="{{ base_path }}/opensource/">오픈소스</a></li>
-            <li class="{% if page.url == '/team/' %} active {% endif %}"><a href="{{ base_path }}/team/">팀 소개</a></li> -->
+            <li class="{% if page.url != '/opensource/' and page.url != '/team/' %} active {% endif %}"><a href="{{ site.url }}{{ site.baseurl }}/">블로그</a></li>
+            <!-- <li class="{% if page.url == '/opensource/' %} active {% endif %}"><a href="{{ site.url }}{{ site.baseurl }}/opensource/">오픈소스</a></li>
+            <li class="{% if page.url == '/team/' %} active {% endif %}"><a href="{{ site.url }}{{ site.baseurl }}/team/">팀 소개</a></li> -->
         </ul>
     </section>
 </div>
