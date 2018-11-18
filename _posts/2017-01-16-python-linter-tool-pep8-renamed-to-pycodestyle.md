@@ -21,20 +21,20 @@ Flative에서 새로 준비하고 있는 프로젝트(가제: 혼밥남녀)에 C
 
 대략적인 대화의 뉘앙스가 이렇게 흘러갑니다.
 
-> gvanrossum: PEP라는 이름을 사용하면 안된다. Python style guide는 사람을 위해 쓰여진거고 여러 섬세한? 미묘한 부분들이 있다.  `pep8`(linter)에 문제가 있으면 사람들은 이게 tool의 문제가 아닌 PEP의 문제로 인식할 수 있다.  
+> gvanrossum: PEP라는 이름을 사용하면 안된다. Python style guide는 사람을 위해 쓰여진거고 여러 섬세한? 미묘한 부분들이 있다.  `pep8`(linter)에 문제가 있으면 사람들은 이게 tool의 문제가 아닌 PEP의 문제로 인식할 수 있다.
 >
-> sigmavirus24: 많은 프로젝트들이 `flake8`을 활용하고 있고. 대부분 `pep8`이 [PEP-0008](https://www.python.org/dev/peps/pep-0008/)에서 영감을 받은 linter라는것을 알고 있을것이다.  
+> sigmavirus24: 많은 프로젝트들이 `flake8`을 활용하고 있고. 대부분 `pep8`이 [PEP-0008](https://www.python.org/dev/peps/pep-0008/)에서 영감을 받은 linter라는것을 알고 있을것이다.
 
 또
 
-> sigmavirus24: [PSF Trademark Usage Policy](https://www.python.org/psf/trademarks/)를 인용하면서 PEP는 상표로 등록되어있지 않다~ 라고 이야기하면서 논쟁이 쭈욱 계속되다가  
+> sigmavirus24: [PSF Trademark Usage Policy](https://www.python.org/psf/trademarks/)를 인용하면서 PEP는 상표로 등록되어있지 않다~ 라고 이야기하면서 논쟁이 쭈욱 계속되다가
 >
-> 1월 12일  [Nurdok (Amir Rachum) · GitHub](https://github.com/Nurdok)이 pep가 붙은 다른 프로젝트 pep257도 곧 이름이 바뀔거다, pep8도 이름이 바뀔거라면 `pycodestyle` `pydocstyle` `pycodelint` `pydoclint`등의 이름으로 바꾸는게 좋을거다  
+> 1월 12일  [Nurdok (Amir Rachum) · GitHub](https://github.com/Nurdok)이 pep가 붙은 다른 프로젝트 pep257도 곧 이름이 바뀔거다, pep8도 이름이 바뀔거라면 `pycodestyle` `pydocstyle` `pycodelint` `pydoclint`등의 이름으로 바꾸는게 좋을거다
 
 라고 제안하고.
 
 결국 `pycodestyle`로 이름이 바뀌었습니다
-![Finally renamed](/static/images/2017-01-16-python-linter-tool-pep8-renamed-to-pycodestyle/finally.png)
+![Finally renamed](/blog/static/images/2017-01-16-python-linter-tool-pep8-renamed-to-pycodestyle/finally.png)
 이 과정을 쭉 지켜보니 느낀점들이
 
 * 네이밍은 신중하게, 그리고 명확하게

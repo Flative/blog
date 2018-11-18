@@ -12,8 +12,8 @@ tags: [python, crawler]
 
 저는 파이썬을 시작한지 얼마 되지 않은 개발자입니다.  그렇기에 혼자 프로젝트를 진행을 한다면 무엇이 좋을까 생각하다 결정하게 된게 **크롤러** 입니다.
 
-  뮤지컬에도 관심이 많았고, 나 자신이 필요로 하는 뮤지컬 정보만 보기 좋게 편하게 만들고자는 목적으로 만들게 되었습니다. 
-그리고 간단하게 크롤러 만드는 방법과 기술을 공유하고자 하여 이 글을 작성하게 되었습니다. 
+  뮤지컬에도 관심이 많았고, 나 자신이 필요로 하는 뮤지컬 정보만 보기 좋게 편하게 만들고자는 목적으로 만들게 되었습니다.
+그리고 간단하게 크롤러 만드는 방법과 기술을 공유하고자 하여 이 글을 작성하게 되었습니다.
  
 
 ## 사용 라이브러리 
@@ -28,7 +28,7 @@ tags: [python, crawler]
 ## BeautifulSoup 사용하여 크롤러 만들기
 
 아래의 코드을 통해 requests를 통해 요청을 주고 받은 후 돌려 받은 데이터를 BeautifulSoup와 lxml를 이용하여 파싱을 진행하였습니다.
-BeautifulSoup에서 기본으로 제공을 해주는 html.parser 란 것이 있는데 그 보다 **lxml** 파서가 더 좋다는 이야기를 들어 해당 파서를 사용하였습니다. 
+BeautifulSoup에서 기본으로 제공을 해주는 html.parser 란 것이 있는데 그 보다 **lxml** 파서가 더 좋다는 이야기를 들어 해당 파서를 사용하였습니다.
 관련된 내용은 추후 작성 할 수 있다면 포스팅을 하도록 하겠습니다.
 
 
@@ -50,7 +50,7 @@ musical_soup = BeautifulSoup(musical_plain_text, 'lxml')
 
 musical_title = musical_soup.find(id="IDGoodsName")
 
-# find로 찾을 때 class를 이용할 경우 
+# find로 찾을 때 class를 이용할 경우
 musical_etc_tag = musical_soup.find('dd', attrs={'class': 'etc'})
 ```
 첫번째 기능은 find 라는 기능입니다. 주로 하나의 것 아래와 처럼 어떠한 tag에 id로 정확하게 쓰인 것을 찾을 때 사용하였습니다.
@@ -61,15 +61,15 @@ musical_etc_tag = musical_soup.find('dd', attrs={'class': 'etc'})
 
 musical_member_list = musical_soup.select('li.members > div > a')
 ```
-두번째 기능은 select 라는 기능입니다. 저자는 주로 이 기능을 여러가지의 내용을 가져올 때 사용하였습니다. 
+두번째 기능은 select 라는 기능입니다. 저자는 주로 이 기능을 여러가지의 내용을 가져올 때 사용하였습니다.
 위의 처럼 태그의 태그의 태그로 가서 데이터를 찾아 올 수 있고 해당 태그의 class 를 사용하여 좀더 가져올 데이터들의 범위를 좁힐 수 있습니다.
 
 이 외에도 정말 무식하게는 코드를 뜯어내어 해당 값을 직접 추출 할 수도 있지만 굉장히 노가다가 심한 작업이였기에 최대한 위의 방법들을 사용하여 데이터를 추출하는게 효율적이라고 생각합니다.
 
 
 ## 뮤지컬 크롤러 결과 화면
-정말 별것도 아닌데 출력되는 결과물 보고 뿌듯 했습니다. 
-![](/static/images/2016-11-27-simple-crawler/result.png)
+정말 별것도 아닌데 출력되는 결과물 보고 뿌듯 했습니다.
+![](/blog/static/images/2016-11-27-simple-crawler/result.png)
 
 
 ## 작업을 하며 느낀점

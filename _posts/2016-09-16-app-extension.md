@@ -25,31 +25,31 @@ tags: [iOS]
 
 우선 새로운 Single View Application 프로젝트를 하나 생성합시다.
 
-![Step1](/static/images/2016-09-16-app-extension/Step1.png)
+![Step1](/blog/static/images/2016-09-16-app-extension/Step1.png)
 
 정보는 대충 적어주시구요.
 
-![Step2](/static/images/2016-09-16-app-extension/Step2.png)
+![Step2](/blog/static/images/2016-09-16-app-extension/Step2.png)
 
 생성후에 프로젝트 기본 화면에서 빨간 네모안의 Targets 부분을 잘 봐주세요
 
-![Step3](/static/images/2016-09-16-app-extension/Step3.png)
+![Step3](/blog/static/images/2016-09-16-app-extension/Step3.png)
 
 `Add Target` 을 눌러줍시다.
 
-![Step4](/static/images/2016-09-16-app-extension/Step4.png)
+![Step4](/blog/static/images/2016-09-16-app-extension/Step4.png)
 
 Action  Extension  을 선택하고 Next!
 
-![Step5](/static/images/2016-09-16-app-extension/Step5.png)
+![Step5](/blog/static/images/2016-09-16-app-extension/Step5.png)
 
 정보도 대충적고 만들어주시면 아래와 같은 그룹이 하나 생성되어있을꺼에요.
 
-![Step6](/static/images/2016-09-16-app-extension/Step6.png)
+![Step6](/blog/static/images/2016-09-16-app-extension/Step6.png)
 
 Info.plist 를 열고 `App Transport Securuty Setting` , `Bundle display name` 이 두가지를 다음과 같이 설정해주세요.
 
-![Step7](/static/images/2016-09-16-app-extension/Step7.png)
+![Step7](/blog/static/images/2016-09-16-app-extension/Step7.png)
 
 UIViewController.swift 파일을 하나 만들고 다음과 같이 작성합니다.
 
@@ -131,7 +131,7 @@ class ActionViewController: UIViewController {
 
 ## 실행 화면
 
-![](/static/images/2016-09-16-app-extension/ScreenShot.png)
+![](/blog/static/images/2016-09-16-app-extension/ScreenShot.png)
 
 ## 마치며
 
